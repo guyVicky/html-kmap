@@ -1,0 +1,53 @@
+.heading {
+    color:rgb(62, 37, 96);
+    text-decoration: wavy underline;
+}
+
+table {
+    margin: auto;
+}
+
+th, td {
+    padding: 1.9vw;
+    font-size: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: black;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+}
+
+.stuff {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-div {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 10vh 80vh 10vh;
+}
+
+footer {
+    padding-top: 4vh;
+    background-color: black;
+}
+
+.footer-element {
+    height: 1vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: antiquewhite;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: bisque;
+}
