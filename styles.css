@@ -1,16 +1,27 @@
 .heading {
+    font-size: calc((26px + 2vmin));
     margin: auto;
     color:rgb(62, 37, 96);
-    text-decoration: wavy underline;
+    text-decoration: dotted underline 4px;
 }
 
 table {
     margin: auto;
 }
 
+td:hover {
+    cursor: pointer;
+}
+
 th, td {
-    padding: 1.9vw;
-    font-size: 20px;
+    /* -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none;  */
+    user-select: none; 
+    padding: 4.9vh;
+    font-size: calc((10px + 2vmin));
 }
 
 table, th, td {
@@ -51,4 +62,10 @@ body {
     margin: 0px;
     font-family: 'Courier New', Courier, monospace;
     background-color: bisque;
+}
+
+@media only screen and (max-width: 600px) {
+    th, td {
+        padding: 5vw;
+    }
 }
