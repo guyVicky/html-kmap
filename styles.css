@@ -42,7 +42,7 @@ th {
 .stuff-ans {
   grid-area: ans;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -88,6 +88,7 @@ body {
     padding: 5vw;
   }
   .grid-div {
+    grid-template-rows: 10vh 60vh 20vh 10vh;
     grid-template-areas:
       "title title"
       "stuff stuff"
