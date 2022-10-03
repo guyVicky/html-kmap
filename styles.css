@@ -1,71 +1,97 @@
 .heading {
-    font-size: calc((26px + 2vmin));
-    margin: auto;
-    color:rgb(62, 37, 96);
-    text-decoration: dotted underline 4px;
+  font-size: calc((26px + 2vmin));
+  margin: auto;
+  color: rgb(62, 37, 96);
+  text-decoration: dotted underline 4px;
+  grid-area: title;
 }
 
 table {
-    margin: auto;
+  margin: auto;
 }
 
 td:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-th, td {
-    /* -webkit-touch-callout: none;
+th,
+td {
+  /* -webkit-touch-callout: none;
     -webkit-user-select: none;
      -khtml-user-select: none; 
        -moz-user-select: none; 
         -ms-user-select: none;  */
-    user-select: none; 
-    padding: 4.9vh;
-    font-size: calc((10px + 2vmin));
+  user-select: none;
+  padding: 4.9vh;
+  font-size: calc((10px + 2vmin));
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
 
 th {
-    background-color: black;
-    color: aliceblue;
-    border: 2px solid aliceblue;
+  background-color: black;
+  color: aliceblue;
+  border: 2px solid aliceblue;
+}
+
+.stuff-ans {
+  grid-area: ans;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .stuff {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  grid-area: stuff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .grid-div {
-    text-align: center;
-    display: grid;
-    grid-template-rows: 10vh 80vh 10vh;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-columns: 50vw 50vw;
+  grid-template-areas:
+    "title title"
+    "stuff ans"
+    "sign sign";
 }
 
 footer {
-    padding-top: 4vh;
-    background-color: black;
+  grid-area: sign;
+  padding-top: 4vh;
+  background-color: black;
 }
 
 .footer-element {
-    height: 1vh;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: antiquewhite;
+  height: 1vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: antiquewhite;
 }
 
 body {
-    margin: 0px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: bisque;
+  margin: 0px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: bisque;
 }
 
 @media only screen and (max-width: 600px) {
-    th, td {
-        padding: 5vw;
-    }
+  th,
+  td {
+    padding: 5vw;
+  }
+  .grid-div {
+    grid-template-areas:
+      "title title"
+      "stuff stuff"
+      "ans ans"
+      "sign sign";
+  }
 }
