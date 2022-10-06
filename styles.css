@@ -39,11 +39,15 @@ th {
   border: 2px solid aliceblue;
 }
 
+.click {
+  margin: auto;
+  display: block;
+}
+
 .stuff-ans {
+  padding: 5vh;
   grid-area: ans;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  display: block;
 }
 
 .stuff {
