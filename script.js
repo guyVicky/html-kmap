@@ -15,7 +15,7 @@ kmap3.arr = [
   [0, 0, 0, 0],
 ];
 
-kmap3.headers = ["AB", "00", "01", "11", "10", "0", "1"];
+kmap3.headers = ["AB", "00", "01", "11", "10"];
 
 kmap4.arr = [
   [0, 0, 0, 0],
@@ -51,10 +51,10 @@ function genTable(radio) {
     case "4":
       kmap = kmap4;
       break;
-
     default:
       break;
   }
+
   let tableParent = document.querySelector(".stuff");
   tableParent.innerHTML = "";
   let table = document.createElement("table");
@@ -72,7 +72,10 @@ function genTable(radio) {
   kmap.arr.forEach((x, i) => {
     let row = document.createElement("tr");
     let vhead = document.createElement("th");
-    let text = document.createTextNode(kmap.headers[i + 1]);
+    let text =
+      radio.id == 3
+        ? document.createTextNode(parseInt(kmap.headers[i + 1]))
+        : document.createTextNode(kmap.headers[i + 1]);
     vhead.appendChild(text);
     row.appendChild(vhead);
     x.forEach((y) => {
