@@ -50,6 +50,10 @@ th {
   display: block;
 }
 
+label {
+  margin: none;
+}
+
 .stuff {
   grid-area: stuff;
   display: flex;

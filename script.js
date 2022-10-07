@@ -35,6 +35,8 @@ document.querySelectorAll('input[name="kmap-type"]').forEach((x) => {
   });
 });
 
+document.getElementById("2").click();
+
 function changeValue(element) {
   let num = Number(element.textContent);
   element.textContent = num ? 0 : 1;
