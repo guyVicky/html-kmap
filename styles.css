@@ -48,10 +48,20 @@ th {
   padding: 5vh;
   grid-area: ans;
   display: block;
+  text-align: left;
+  font-size: 2em;
 }
 
 label {
-  margin: none;
+  display: block;
+  user-select: none;
+}
+
+label > input {
+  width: calc(1em * 1.6);
+  height: calc(1em * 1.6);
+  vertical-align: baseline;
+  margin: 0px;
 }
 
 .stuff {

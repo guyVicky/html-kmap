@@ -26,12 +26,15 @@ kmap4.arr = [
 
 kmap4.headers = ["AB", "00", "01", "11", "10"];
 
+curradio = "2";
+
 // console.log("hello, kmap");
 // let arr = new Array(5);
 // arr.forEach((x) => (x = new Array(5)));
 document.querySelectorAll('input[name="kmap-type"]').forEach((x) => {
   x.addEventListener("click", (event) => {
-    genTable(event.target);
+    curradio = event.target.id;
+    genTable();
   });
 });
 
@@ -42,8 +45,8 @@ function changeValue(element) {
   element.textContent = num ? 0 : 1;
 }
 
-function genTable(radio) {
-  switch (radio.id) {
+function genTable() {
+  switch (curradio) {
     case "2":
       kmap = kmap2;
       break;
@@ -75,7 +78,7 @@ function genTable(radio) {
     let row = document.createElement("tr");
     let vhead = document.createElement("th");
     let text =
-      radio.id == 3
+      curradio == 3
         ? document.createTextNode(parseInt(kmap.headers[i + 1]))
         : document.createTextNode(kmap.headers[i + 1]);
     vhead.appendChild(text);
