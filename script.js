@@ -25,7 +25,6 @@ kmap4.arr = [
 ];
 
 kmap4.headers = ["AB", "00", "01", "11", "10"];
-
 curradio = "2";
 
 // console.log("hello, kmap");
@@ -40,9 +39,30 @@ document.querySelectorAll('input[name="kmap-type"]').forEach((x) => {
 
 document.getElementById("2").click();
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 function changeValue(element) {
   let num = Number(element.textContent);
   element.textContent = num ? 0 : 1;
+  let k;
+  switch (curradio) {
+    case "2":
+      k = kmap2;
+      break;
+    case "3":
+      k = kmap3;
+      break;
+    case "4":
+      k = kmap4;
+      break;
+    default:
+      break;
+  }
+  k.arr[element.parentNode.rowIndex - 1][element.cellIndex - 1] = parseInt(
+    element.textContent
+  );
 }
 
 function genTable() {
@@ -97,4 +117,16 @@ function genTable() {
   tableParent.appendChild(table);
 }
 
-function getArray() {}
+function getArray() {
+  console.log("yoooo");
+}
+
+async function loop() {
+  let area = document.querySelectorAll("td");
+  area.forEach(async (ele) => {
+    let prev = ele.style.background;
+    ele.style.background = "#d44d2e";
+    await sleep(10000);
+    // ele.style.background = prev;
+  });
+}
