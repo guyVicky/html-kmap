@@ -121,12 +121,13 @@ function getArray() {
   console.log("yoooo");
 }
 
-async function loop() {
+function loop() {
   let area = document.querySelectorAll("td");
   area.forEach(async (ele) => {
+    await sleep(1000);
     let prev = ele.style.background;
     ele.style.background = "#d44d2e";
-    await sleep(10000);
-    // ele.style.background = prev;
+    await sleep(1000);
+    ele.style.background = prev;
   });
 }
