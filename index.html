@@ -10,8 +10,11 @@
   </head>
   <body>
     <div class="grid-div">
-      <h1 class="heading">scld k-map solver(v0.3)</h1>
-      <div class="stuff"></div>
+      <h1 class="heading">scld k-map solver (v0.3)</h1>
+      <div class="stuff">
+        <div class="grid"></div>
+        <div><button class="bn1" onclick="clear()">Clear</button></div>
+      </div>
       <div class="stuff-ans">
         <div class="option">
           <span style="display: block"> Choose the type of K-map to use: </span>
@@ -27,8 +30,10 @@
             <input type="radio" id="4" name="kmap-type" />
             <span>4</span>
           </label>
-          <button class="bn1" onclick="console.log('hey');">Solve</button>
-          <button class="bn1" onclick="loop();">Clear</button>
+          <span style="display: block"
+            >Prime Term Simplification enable ?
+            <input type="checkbox" id="ch" />
+          </span>
         </div>
         <div class="sop"><span>y =</span> <span id="solution"></span></div>
       </div>

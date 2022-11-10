@@ -211,6 +211,7 @@ document.querySelectorAll('input[name="kmap-type"]').forEach((x) => {
     updateResult();
   });
 });
+document.getElementsByClassName("bn1")[0].addEventListener("click", clear);
 document.getElementById("2").click();
 
 function changeValue(element) {
@@ -250,7 +251,7 @@ function genTable() {
       break;
   }
 
-  let tableParent = document.querySelector(".stuff");
+  let tableParent = document.querySelector(".grid");
   tableParent.innerHTML = "";
   let table = document.createElement("table");
   table.id = "kmap";
@@ -304,4 +305,18 @@ function updateResult() {
   });
 
   document.getElementById("solution").innerText = res;
+}
+
+function clear() {
+  console.log("hello");
+  let x = curradio == 3 ? 2 : curradio;
+  let y = curradio == 3 ? 4 : curradio;
+
+  for (let i = 0; i < x; i++) {
+    for (let j = 0; j < y; j++) {
+      kmap.arr[i][j] = 0;
+    }
+  }
+  genTable();
+  updateResult();
 }

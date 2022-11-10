@@ -44,6 +44,14 @@ th {
   display: block;
 }
 
+#ch {
+  transform: scale(1.2);
+  width: calc(1em * 1.6);
+  height: calc(1em * 1.6);
+  vertical-align: baseline;
+  margin: 0px;
+}
+
 .sop {
   font-size: smaller;
   font-style: italic;
@@ -121,8 +129,9 @@ label > input {
 .stuff {
   grid-area: stuff;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .grid-div {
