@@ -208,6 +208,7 @@ document.querySelectorAll('input[name="kmap-type"]').forEach((x) => {
   x.addEventListener("click", (event) => {
     curradio = event.target.id;
     genTable();
+    updateResult();
   });
 });
 document.getElementById("2").click();
@@ -298,8 +299,9 @@ function updateResult() {
   let result = kar.simplify(b);
   let res = "";
   result.forEach((ele, idx) => {
+    res += idx ? " + " : "";
     res += kar.getResult(ele);
-    res += idx ? "+" : "";
   });
-  console.log(res);
+
+  document.getElementById("solution").innerText = res;
 }
