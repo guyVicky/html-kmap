@@ -44,6 +44,14 @@ th {
   display: block;
 }
 
+.option {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  border-bottom: 3px gray dotted;
+}
+
 #ch {
   transform: scale(1.2);
   width: calc(1em * 1.6);
@@ -55,6 +63,13 @@ th {
 .sop {
   font-size: smaller;
   font-style: italic;
+  font-weight: 800;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .stuff-ans {
@@ -96,6 +111,7 @@ th {
   touch-action: manipulation;
   vertical-align: top;
   white-space: nowrap;
+  width: 50%;
 }
 
 .bn1:hover {

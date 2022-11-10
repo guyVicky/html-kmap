@@ -13,29 +13,33 @@
       <h1 class="heading">scld k-map solver (v0.3)</h1>
       <div class="stuff">
         <div class="grid"></div>
-        <div><button class="bn1" onclick="clear()">Clear</button></div>
+        <button class="bn1" onclick="clear()">Clear</button>
       </div>
       <div class="stuff-ans">
         <div class="option">
-          <span style="display: block"> Choose the type of K-map to use: </span>
-          <label>
-            <input type="radio" id="2" name="kmap-type" />
-            <span>2</span>
-          </label>
-          <label>
-            <input type="radio" id="3" name="kmap-type" />
-            <span>3</span>
-          </label>
-          <label>
-            <input type="radio" id="4" name="kmap-type" />
-            <span>4</span>
-          </label>
+          <div>
+            <span style="display: block">
+              Choose the type of K-map to use:
+            </span>
+            <label>
+              <input type="radio" id="2" name="kmap-type" />
+              <span>2</span>
+            </label>
+            <label>
+              <input type="radio" id="3" name="kmap-type" />
+              <span>3</span>
+            </label>
+            <label>
+              <input type="radio" id="4" name="kmap-type" />
+              <span>4</span>
+            </label>
+          </div>
           <span style="display: block"
             >Prime Term Simplification enable ?
             <input type="checkbox" id="ch" />
           </span>
         </div>
-        <div class="sop"><span>y =</span> <span id="solution"></span></div>
+        <div class="sop"><span>y = </span> <span id="solution"> </span></div>
       </div>
       <footer>
         <span class="footer-element">Vikrant Singh</span>
