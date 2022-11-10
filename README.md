@@ -1,4 +1,4 @@
 # html-kmap
-##### v0.1
+##### v0.3
 - Display a table of Karnaugh elements
-- Add simple CSS
+- Add basic CSS
