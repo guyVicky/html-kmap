@@ -144,20 +144,23 @@ class karnaugh {
     return Array.from(result);
   }
 
-  simplify_prime(ones) {
-    let result = this.simplify(ones);
+  simplify_prime(positive) {
+    let result = this.simplify(positive);
     let simplifiedResult = new Array();
-
     let gcols = new Set();
     let rowsOfCol = new Array();
     let colsOfRow = new Map();
-    ones.forEach((col) => {
+    positive.forEach((col) => {
       gcols.add(col);
       rowsOfCol[col] = new Array();
     });
     result.forEach((row) => {
       let cols = this.minResult(row);
       let reducedCols = new Array();
+      cols.forEach((col) => {
+        rowsOfCol[col].push(row);
+        reducedCols.push(col);
+      });
       if (reducedCols.length) colsOfRow.set(row, reducedCols);
     });
 
@@ -297,7 +300,9 @@ function updateResult() {
       b.add(i);
     }
   }
-  let result = kar.simplify(b);
+  let result = document.querySelector("#ch").checked
+    ? kar.simplify_prime(b)
+    : kar.simplify(b);
   let res = "";
   result.forEach((ele, idx) => {
     res += idx ? " + " : "";

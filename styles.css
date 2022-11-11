@@ -78,7 +78,7 @@ th {
   display: grid;
   grid-template-rows: 1fr 1fr;
   text-align: left;
-  font-size: 2em;
+  font-size: 1.4em;
 }
 
 .bn1 {
